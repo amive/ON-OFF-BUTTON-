@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application ON/OFF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #onButton {
+            background-color: lightgreen;
+        }
+        #offButton {
+            background-color: lightcoral;
+        }
+        #statusButton {
+            background-color: white;
+            cursor: default; /* Désactive le curseur */
+        }
+        #statusLabel {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="onButton" onclick="turnOn()">ON</button>
+        <button id="offButton" onclick="turnOff()">OFF</button>
+        <br>
+        <button id="statusButton">Statut</button>
+        <p id="statusLabel">Statut : OFF</p>
+    </div>
+
+    <script>
+        // Fonction pour allumer (ON)
+        function turnOn() {
+            document.getElementById("statusButton").style.backgroundColor = "green";
+            document.getElementById("statusLabel").textContent = "Statut : ON";
+        }
+
+        // Fonction pour éteindre (OFF)
+        function turnOff() {
+            document.getElementById("statusButton").style.backgroundColor = "red";
+            document.getElementById("statusLabel").textContent = "Statut : OFF";
+        }
+    </script>
+</body>
+</html>
